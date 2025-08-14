@@ -7,6 +7,9 @@ let quotes =[
 const quoteDisplay = document.getElementById("quoteDisplay");
 const newQuoteBtn = document.getElementById("newQuote");
 const addQuoteBtn = document.getElementById("addQuoteBtn");
+const ul=document.createElement("li");
+quoteDisplay.appendChild("li")
+
 
 function showRandomQuotes(){
     if(quotes.length===0){
