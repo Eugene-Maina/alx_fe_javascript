@@ -10,12 +10,12 @@ const addQuoteBtn = document.getElementById("addQuoteBtn");
 
 function showRandomQuotes(){
     if(quotes.length===0){
-        quoteDisplay.textContent="There are no quotes to show please add some";
+        quoteDisplay.innerHTML="There are no quotes to show please add some";
         return;
     }
      const randomIndex = Math.floor(Math.random() * quotes.length);
      const quote = quotes[randomIndex];
-     quoteDisplay.textContent = `"${quote.text}" — ${quote.category}`;
+     quoteDisplay.innerHTML = `"${quote.text}" — ${quote.category}`;
 }
 function addQuote(){
     const textInput= document.getElementById("newQuoteText")
