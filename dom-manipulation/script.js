@@ -37,3 +37,7 @@ function createAddQuoteForm(){
         alert("Please enter category and quote!")
     }
 }
+
+
+newQuoteBtn.addEventListener("click", showRandomQuotes);
+addQuoteBtn.addEventListener("click", createAddQuoteForm);
