@@ -10,6 +10,10 @@ const addQuoteBtn = document.getElementById("addQuoteBtn");
 const ul=document.createElement("li");
 quoteDisplay.appendChild("li")
 
+function saveQuotes()={
+    localStorage.setItem("quotes",JSON.stringify(quotes));
+}
+
 
 function showRandomQuotes(){
     if(quotes.length===0){
@@ -20,6 +24,11 @@ function showRandomQuotes(){
      const quote = quotes[randomIndex];
      quoteDisplay.innerHTML = `"${quote.text}" — ${quote.category}`;
 }
+
+  sessionStorage.setItem("lastQuote", JSON.stringify(quote));
+
+  quoteDisplay.innerHTML = `"${quote.text}" — ${quote.category}`;
+
 function createAddQuoteForm(){
     const textInput= document.getElementById("newQuoteText")
     const categoryInput=document.getElementById("newQuoteCategory");
