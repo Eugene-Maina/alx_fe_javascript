@@ -14,7 +14,7 @@ function saveQuotes() {
 }
 
 // Fetch quotes from server
-async function fetchServerQuotes() {
+async function fetchQuotesFromServer() {
     try {
         const response = await fetch(SERVER_URL);
         const serverData = await response.json();
@@ -34,7 +34,7 @@ async function fetchServerQuotes() {
 
 // Sync local data with server
 async function syncWithServer() {
-    const serverQuotes = await fetchServerQuotes();
+    const serverQuotes = await fetchQuotesFromServer();
     const localQuotes = [...quotes];
     
     // Simple conflict resolution: server data takes precedence for same IDs
